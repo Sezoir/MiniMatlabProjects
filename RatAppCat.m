@@ -44,30 +44,3 @@ while(i+j<=N && j~=N)
    end
 end
 
-
-%% Loop through each potential value of i and j.
-% As we know Catalan's constant is greater than 0.9, then we can say that
-% i/j>0.9 which implies i>0.9*j, so we set the lower bound of i equal to
-% 0.9*j round down. The upper bound for i has to follow the constraint of
-% i+j<=N, which we rearrange to i<=N-j, so we use N-j as our upper bound.
-% for j = 1:1:N
-%    for i = floor(0.9*j):1:N-j
-%       % Find the difference between G and i/j. We only want to measure the
-%       % "size" difference, so we ignore the sign with abs.
-%       diff = abs(G-i/j);
-%        % Check if the difference for the current i and j is better than the
-%        % previous.
-%        if(diff < oldDiff)
-%            % Update the oldDiff with the new difference, and update the
-%            % output variables p and q.
-%             oldDiff = diff;
-%             p = i;
-%             q = j;
-%        end 
-%    end
-% end
-% % Easy way to simplify p/q fraction, and then want to swap back p and q to
-% % double notation.
-% [p, q] = numden(sym(p/q));
-% p = double(p);
-% q = double(q);
